@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# Environment Variables
+.env
+
+# Logs
+*.log
+logs/*.log
+
+# Temporary Files
+temp/*
+!temp/.gitkeep
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+
+# Python cache
+.mypy_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Streamlit
+.streamlit/secrets.toml
