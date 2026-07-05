@@ -154,9 +154,14 @@ if __name__ == "__main__":
                     importlib.reload(sys.modules[mod_name])
                 except Exception:
                     pass
-        if "frontend.ui" in sys.modules:
-            importlib.reload(sys.modules["frontend.ui"])
-        else:
+        try:
+            if "frontend.ui" in sys.modules:
+                importlib.reload(sys.modules["frontend.ui"])
+            else:
+                import frontend.ui
+        except Exception:
+            # Fallback to direct import if reload fails (e.g. under production/Streamlit Cloud runtimes)
+            sys.modules.pop("frontend.ui", None)
             import frontend.ui
     else:
         main()
