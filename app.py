@@ -143,4 +143,20 @@ if __name__ == "__main__":
             is_streamlit = True
     except Exception:
         pass
- 
+
+    if is_streamlit:
+        import sys
+        import importlib
+        # Reload custom project modules to pick up developer edits dynamically (excluding frontend.ui)
+        for mod_name in list(sys.modules.keys()):
+            if mod_name.startswith(("database", "frontend", "parser", "config")) and mod_name != "frontend.ui":
+                try:
+                    importlib.reload(sys.modules[mod_name])
+                except Exception:
+                    pass
+        if "frontend.ui" in sys.modules:
+            importlib.reload(sys.modules["frontend.ui"])
+        else:
+            import frontend.ui
+    else:
+        main()
