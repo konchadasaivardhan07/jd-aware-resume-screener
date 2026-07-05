@@ -1,0 +1,1305 @@
+{
+    "Programming Languages": {
+        "Python": {
+            "aliases": [
+                "python",
+                "python3",
+                "python programming",
+                "py"
+            ],
+            "type": "Language",
+            "related": [
+                "Flask",
+                "Django",
+                "FastAPI",
+                "TensorFlow",
+                "PyTorch",
+                "NumPy",
+                "Pandas",
+                "Scikit-learn",
+                "XGBoost",
+                "SciPy",
+                "Matplotlib",
+                "Seaborn"
+            ]
+        },
+        "Java": {
+            "aliases": [
+                "java",
+                "core java",
+                "advanced java",
+                "jdk"
+            ],
+            "type": "Language",
+            "related": [
+                "Spring Boot",
+                "Hibernate",
+                "Maven",
+                "Gradle",
+                "JUnit",
+                "Spring MVC"
+            ]
+        },
+        "JavaScript": {
+            "aliases": [
+                "javascript",
+                "js",
+                "ecmascript"
+            ],
+            "type": "Language",
+            "related": [
+                "React",
+                "Node.js",
+                "Express.js",
+                "Vue.js",
+                "Angular",
+                "jQuery",
+                "Next.js",
+                "Nuxt.js"
+            ]
+        },
+        "TypeScript": {
+            "aliases": [
+                "typescript",
+                "ts"
+            ],
+            "type": "Language",
+            "related": [
+                "Angular",
+                "React",
+                "Next.js",
+                "NestJS"
+            ]
+        },
+        "SQL": {
+            "aliases": [
+                "sql",
+                "structured query language"
+            ],
+            "type": "Language",
+            "related": [
+                "MySQL",
+                "PostgreSQL",
+                "Oracle DB",
+                "SQL Server",
+                "SQLite",
+                "T-SQL",
+                "PL/SQL"
+            ]
+        },
+        "C++": {
+            "aliases": [
+                "c++",
+                "cpp"
+            ],
+            "type": "Language",
+            "related": [
+                "STL",
+                "OOP",
+                "Qt",
+                "Boost"
+            ]
+        },
+        "C#": {
+            "aliases": [
+                "c#",
+                "csharp",
+                "c-sharp"
+            ],
+            "type": "Language",
+            "related": [
+                ".NET",
+                "ASP.NET",
+                "Entity Framework",
+                "WPF",
+                "Xamarin"
+            ]
+        },
+        "Go": {
+            "aliases": [
+                "go",
+                "golang"
+            ],
+            "type": "Language",
+            "related": [
+                "Gin",
+                "Echo",
+                "Hugo"
+            ]
+        },
+        "Rust": {
+            "aliases": [
+                "rust",
+                "rustlang"
+            ],
+            "type": "Language",
+            "related": [
+                "Cargo",
+                "Actix",
+                "Tokio"
+            ]
+        },
+        "R": {
+            "aliases": [
+                "r",
+                "r programming"
+            ],
+            "type": "Language",
+            "related": [
+                "ggplot2",
+                "tidyverse",
+                "shiny",
+                "dplyr"
+            ]
+        },
+        "PHP": {
+            "aliases": [
+                "php",
+                "php8"
+            ],
+            "type": "Language",
+            "related": [
+                "Laravel",
+                "Symfony",
+                "WordPress",
+                "CodeIgniter"
+            ]
+        },
+        "Ruby": {
+            "aliases": [
+                "ruby",
+                "jruby"
+            ],
+            "type": "Language",
+            "related": [
+                "Ruby on Rails",
+                "Sinatra"
+            ]
+        },
+        "Scala": {
+            "aliases": [
+                "scala"
+            ],
+            "type": "Language",
+            "related": [
+                "Spark",
+                "Akka",
+                "Play Framework"
+            ]
+        },
+        "Swift": {
+            "aliases": [
+                "swift",
+                "swiftui"
+            ],
+            "type": "Language",
+            "related": [
+                "iOS",
+                "Cocoa Touch",
+                "Xcode"
+            ]
+        },
+        "Kotlin": {
+            "aliases": [
+                "kotlin"
+            ],
+            "type": "Language",
+            "related": [
+                "Android",
+                "KMM",
+                "Coroutines"
+            ]
+        }
+    },
+    "Frontend": {
+        "HTML": {
+            "aliases": [
+                "html",
+                "html5",
+                "xhtml"
+            ],
+            "type": "Frontend",
+            "related": [
+                "CSS",
+                "Bootstrap",
+                "SASS"
+            ]
+        },
+        "CSS": {
+            "aliases": [
+                "css",
+                "css3",
+                "postcss"
+            ],
+            "type": "Frontend",
+            "related": [
+                "HTML",
+                "SASS",
+                "Tailwind CSS",
+                "Bootstrap",
+                "LESS"
+            ]
+        },
+        "React": {
+            "aliases": [
+                "react",
+                "reactjs",
+                "react.js",
+                "react native"
+            ],
+            "type": "Frontend",
+            "related": [
+                "JavaScript",
+                "Redux",
+                "TypeScript",
+                "Next.js",
+                "Zustand",
+                "Context API"
+            ]
+        },
+        "Angular": {
+            "aliases": [
+                "angular",
+                "angularjs",
+                "angular.js"
+            ],
+            "type": "Frontend",
+            "related": [
+                "TypeScript",
+                "RxJS",
+                "NgRx"
+            ]
+        },
+        "Vue.js": {
+            "aliases": [
+                "vue",
+                "vuejs",
+                "vue.js"
+            ],
+            "type": "Frontend",
+            "related": [
+                "JavaScript",
+                "Vuex",
+                "Pinia",
+                "Nuxt.js"
+            ]
+        },
+        "Next.js": {
+            "aliases": [
+                "next.js",
+                "nextjs"
+            ],
+            "type": "Frontend",
+            "related": [
+                "React",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        "Tailwind CSS": {
+            "aliases": [
+                "tailwind",
+                "tailwindcss",
+                "tailwind css"
+            ],
+            "type": "Frontend",
+            "related": [
+                "CSS",
+                "HTML"
+            ]
+        },
+        "Bootstrap": {
+            "aliases": [
+                "bootstrap",
+                "bootstrap5"
+            ],
+            "type": "Frontend",
+            "related": [
+                "CSS",
+                "HTML"
+            ]
+        },
+        "SASS": {
+            "aliases": [
+                "sass",
+                "scss"
+            ],
+            "type": "Frontend",
+            "related": [
+                "CSS"
+            ]
+        }
+    },
+    "Backend": {
+        "Flask": {
+            "aliases": [
+                "flask"
+            ],
+            "type": "Backend",
+            "related": [
+                "Python"
+            ]
+        },
+        "FastAPI": {
+            "aliases": [
+                "fastapi"
+            ],
+            "type": "Backend",
+            "related": [
+                "Python"
+            ]
+        },
+        "Django": {
+            "aliases": [
+                "django",
+                "drf"
+            ],
+            "type": "Backend",
+            "related": [
+                "Python"
+            ]
+        },
+        "Spring Boot": {
+            "aliases": [
+                "spring boot",
+                "springboot",
+                "spring data"
+            ],
+            "type": "Backend",
+            "related": [
+                "Java"
+            ]
+        },
+        "Node.js": {
+            "aliases": [
+                "node",
+                "nodejs",
+                "node.js"
+            ],
+            "type": "Backend",
+            "related": [
+                "JavaScript",
+                "Express.js",
+                "NestJS"
+            ]
+        },
+        "Express.js": {
+            "aliases": [
+                "express",
+                "expressjs",
+                "express.js"
+            ],
+            "type": "Backend",
+            "related": [
+                "Node.js",
+                "JavaScript"
+            ]
+        },
+        "NestJS": {
+            "aliases": [
+                "nestjs",
+                "nest.js"
+            ],
+            "type": "Backend",
+            "related": [
+                "TypeScript",
+                "Node.js"
+            ]
+        },
+        "Ruby on Rails": {
+            "aliases": [
+                "rails",
+                "ruby on rails",
+                "ror"
+            ],
+            "type": "Backend",
+            "related": [
+                "Ruby"
+            ]
+        },
+        "Laravel": {
+            "aliases": [
+                "laravel"
+            ],
+            "type": "Backend",
+            "related": [
+                "PHP"
+            ]
+        },
+        "ASP.NET": {
+            "aliases": [
+                "asp.net",
+                "aspnet",
+                "dotnet core",
+                ".net core"
+            ],
+            "type": "Backend",
+            "related": [
+                "C#",
+                ".NET"
+            ]
+        }
+    },
+    "Databases": {
+        "PostgreSQL": {
+            "aliases": [
+                "postgresql",
+                "postgres",
+                "pg"
+            ],
+            "type": "Database",
+            "related": [
+                "SQL"
+            ]
+        },
+        "MySQL": {
+            "aliases": [
+                "mysql"
+            ],
+            "type": "Database",
+            "related": [
+                "SQL"
+            ]
+        },
+        "MongoDB": {
+            "aliases": [
+                "mongodb",
+                "mongo"
+            ],
+            "type": "Database",
+            "related": [
+                "NoSQL"
+            ]
+        },
+        "Redis": {
+            "aliases": [
+                "redis"
+            ],
+            "type": "Database",
+            "related": [
+                "NoSQL"
+            ]
+        },
+        "Oracle DB": {
+            "aliases": [
+                "oracle",
+                "oracle db",
+                "oracle database"
+            ],
+            "type": "Database",
+            "related": [
+                "SQL",
+                "PL/SQL"
+            ]
+        },
+        "SQL Server": {
+            "aliases": [
+                "mssql",
+                "sql server",
+                "microsoft sql server"
+            ],
+            "type": "Database",
+            "related": [
+                "SQL",
+                "T-SQL"
+            ]
+        },
+        "DynamoDB": {
+            "aliases": [
+                "dynamodb"
+            ],
+            "type": "Database",
+            "related": [
+                "AWS",
+                "NoSQL"
+            ]
+        },
+        "CosmosDB": {
+            "aliases": [
+                "cosmosdb",
+                "cosmos db"
+            ],
+            "type": "Database",
+            "related": [
+                "Azure",
+                "NoSQL"
+            ]
+        },
+        "Cassandra": {
+            "aliases": [
+                "cassandra",
+                "apache cassandra"
+            ],
+            "type": "Database",
+            "related": [
+                "NoSQL"
+            ]
+        },
+        "Neo4j": {
+            "aliases": [
+                "neo4j",
+                "graph database"
+            ],
+            "type": "Database",
+            "related": [
+                "Cypher"
+            ]
+        }
+    },
+    "Cloud Platforms": {
+        "AWS": {
+            "aliases": [
+                "aws",
+                "amazon web services",
+                "ec2",
+                "s3",
+                "lambda",
+                "athena",
+                "rds",
+                "route53",
+                "iam"
+            ],
+            "type": "Cloud",
+            "related": [
+                "EC2",
+                "S3",
+                "Lambda",
+                "Athena",
+                "CloudFormation"
+            ]
+        },
+        "GCP": {
+            "aliases": [
+                "gcp",
+                "google cloud",
+                "google cloud platform",
+                "bigquery",
+                "gcs",
+                "gke",
+                "pubsub"
+            ],
+            "type": "Cloud",
+            "related": [
+                "BigQuery",
+                "GCS",
+                "GKE"
+            ]
+        },
+        "Azure": {
+            "aliases": [
+                "azure",
+                "microsoft azure",
+                "aks",
+                "active directory",
+                "key vault"
+            ],
+            "type": "Cloud",
+            "related": [
+                "Azure DevOps",
+                "AKS"
+            ]
+        }
+    },
+    "DevOps & Infrastructure": {
+        "Docker": {
+            "aliases": [
+                "docker",
+                "dockerfile",
+                "docker-compose"
+            ],
+            "type": "DevOps",
+            "related": [
+                "Kubernetes",
+                "Containers"
+            ]
+        },
+        "Kubernetes": {
+            "aliases": [
+                "kubernetes",
+                "k8s",
+                "helm"
+            ],
+            "type": "DevOps",
+            "related": [
+                "Docker",
+                "Containers",
+                "EKS",
+                "GKE"
+            ]
+        },
+        "CI/CD": {
+            "aliases": [
+                "ci/cd",
+                "jenkins",
+                "github actions",
+                "gitlab ci",
+                "bitbucket pipelines",
+                "travis ci",
+                "circleci"
+            ],
+            "type": "DevOps",
+            "related": [
+                "Docker",
+                "Git"
+            ]
+        },
+        "Terraform": {
+            "aliases": [
+                "terraform",
+                "tf",
+                "iac"
+            ],
+            "type": "DevOps",
+            "related": [
+                "AWS",
+                "GCP",
+                "Azure",
+                "Ansible"
+            ]
+        },
+        "Ansible": {
+            "aliases": [
+                "ansible"
+            ],
+            "type": "DevOps",
+            "related": [
+                "Terraform",
+                "Puppet",
+                "Chef"
+            ]
+        },
+        "Git": {
+            "aliases": [
+                "git",
+                "github",
+                "gitlab",
+                "bitbucket"
+            ],
+            "type": "DevOps",
+            "related": [
+                "CI/CD"
+            ]
+        },
+        "Prometheus": {
+            "aliases": [
+                "prometheus",
+                "grafana",
+                "elk",
+                "datadog",
+                "splunk"
+            ],
+            "type": "DevOps",
+            "related": [
+                "Kubernetes"
+            ]
+        }
+    },
+    "Machine Learning & AI": {
+        "Machine Learning": {
+            "aliases": [
+                "machine learning",
+                "ml",
+                "statistical learning"
+            ],
+            "type": "AI",
+            "related": [
+                "Scikit-learn",
+                "XGBoost",
+                "Pandas",
+                "NumPy",
+                "Regression",
+                "Classification",
+                "Random Forest"
+            ]
+        },
+        "Scikit-learn": {
+            "aliases": [
+                "scikit-learn",
+                "sklearn"
+            ],
+            "type": "AI",
+            "related": [
+                "Python",
+                "Machine Learning"
+            ]
+        },
+        "XGBoost": {
+            "aliases": [
+                "xgboost",
+                "lightgbm",
+                "catboost"
+            ],
+            "type": "AI",
+            "related": [
+                "Machine Learning"
+            ]
+        },
+        "Pandas": {
+            "aliases": [
+                "pandas"
+            ],
+            "type": "AI",
+            "related": [
+                "Python",
+                "NumPy"
+            ]
+        },
+        "NumPy": {
+            "aliases": [
+                "numpy"
+            ],
+            "type": "AI",
+            "related": [
+                "Python",
+                "Pandas"
+            ]
+        },
+        "Natural Language Processing": {
+            "aliases": [
+                "nlp",
+                "natural language processing",
+                "text mining",
+                "spacy",
+                "nltk",
+                "transformers"
+            ],
+            "type": "AI",
+            "related": [
+                "Python",
+                "Deep Learning"
+            ]
+        },
+        "Computer Vision": {
+            "aliases": [
+                "computer vision",
+                "cv",
+                "opencv",
+                "yolo",
+                "image processing"
+            ],
+            "type": "AI",
+            "related": [
+                "Python",
+                "Deep Learning"
+            ]
+        }
+    },
+    "Deep Learning & Generative AI": {
+        "Deep Learning": {
+            "aliases": [
+                "deep learning",
+                "neural networks",
+                "ann",
+                "cnn",
+                "rnn",
+                "lstm"
+            ],
+            "type": "GenAI",
+            "related": [
+                "PyTorch",
+                "TensorFlow",
+                "Keras"
+            ]
+        },
+        "PyTorch": {
+            "aliases": [
+                "pytorch"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Python",
+                "Deep Learning"
+            ]
+        },
+        "TensorFlow": {
+            "aliases": [
+                "tensorflow",
+                "tf"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Python",
+                "Deep Learning",
+                "Keras"
+            ]
+        },
+        "Generative AI": {
+            "aliases": [
+                "generative ai",
+                "genai",
+                "gen ai"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Large Language Models",
+                "LangChain",
+                "LlamaIndex",
+                "Vector Databases",
+                "Prompt Engineering"
+            ]
+        },
+        "Large Language Models": {
+            "aliases": [
+                "llm",
+                "llms",
+                "large language models",
+                "gpt",
+                "gpt-4",
+                "llama",
+                "claude",
+                "gemini",
+                "bert"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Generative AI",
+                "HuggingFace",
+                "OpenAI"
+            ]
+        },
+        "LangChain": {
+            "aliases": [
+                "langchain",
+                "llamaindex",
+                "haystack"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Generative AI",
+                "Large Language Models"
+            ]
+        },
+        "Vector Databases": {
+            "aliases": [
+                "vector database",
+                "vector databases",
+                "pinecone",
+                "chromadb",
+                "weaviate",
+                "milvus",
+                "qdrant"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Generative AI",
+                "Large Language Models"
+            ]
+        },
+        "OpenAI": {
+            "aliases": [
+                "openai",
+                "huggingface",
+                "cohere",
+                "anthropic"
+            ],
+            "type": "GenAI",
+            "related": [
+                "Generative AI",
+                "Large Language Models"
+            ]
+        }
+    },
+    "Data Engineering & Big Data": {
+        "Apache Spark": {
+            "aliases": [
+                "spark",
+                "pyspark",
+                "apache spark",
+                "databricks"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Hadoop",
+                "Scala",
+                "Python"
+            ]
+        },
+        "Hadoop": {
+            "aliases": [
+                "hadoop",
+                "mapreduce",
+                "hdfs",
+                "hive"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Apache Spark"
+            ]
+        },
+        "Apache Kafka": {
+            "aliases": [
+                "kafka",
+                "apache kafka",
+                "event streaming"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Flink",
+                "RabbitMQ"
+            ]
+        },
+        "Airflow": {
+            "aliases": [
+                "airflow",
+                "apache airflow",
+                "dag",
+                "prefect",
+                "luigi"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Python",
+                "ETL"
+            ]
+        },
+        "dbt": {
+            "aliases": [
+                "dbt",
+                "data build tool"
+            ],
+            "type": "DataEng",
+            "related": [
+                "SQL",
+                "Snowflake",
+                "BigQuery"
+            ]
+        },
+        "Snowflake": {
+            "aliases": [
+                "snowflake",
+                "redshift",
+                "bigquery"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Data Warehousing"
+            ]
+        },
+        "ETL": {
+            "aliases": [
+                "etl",
+                "elt",
+                "data pipeline",
+                "data integration"
+            ],
+            "type": "DataEng",
+            "related": [
+                "Airflow",
+                "SQL"
+            ]
+        }
+    },
+    "BI & Analytics": {
+        "Business Intelligence": {
+            "aliases": [
+                "bi",
+                "business intelligence",
+                "tableau",
+                "power bi",
+                "looker",
+                "qlikview"
+            ],
+            "type": "Analytics",
+            "related": [
+                "Power BI",
+                "Tableau",
+                "Looker",
+                "SQL"
+            ]
+        },
+        "Power BI": {
+            "aliases": [
+                "power bi",
+                "powerbi",
+                "dax"
+            ],
+            "type": "Analytics",
+            "related": [
+                "Business Intelligence",
+                "SQL"
+            ]
+        },
+        "Tableau": {
+            "aliases": [
+                "tableau",
+                "tableau desktop"
+            ],
+            "type": "Analytics",
+            "related": [
+                "Business Intelligence",
+                "SQL"
+            ]
+        },
+        "Looker": {
+            "aliases": [
+                "looker",
+                "lookml"
+            ],
+            "type": "Analytics",
+            "related": [
+                "Business Intelligence",
+                "SQL"
+            ]
+        },
+        "Google Analytics": {
+            "aliases": [
+                "google analytics",
+                "ga4",
+                "google analytics 4",
+                "adobe analytics"
+            ],
+            "type": "Analytics",
+            "related": [
+                "SEO",
+                "Digital Marketing"
+            ]
+        }
+    },
+    "ERP & CRM": {
+        "SAP": {
+            "aliases": [
+                "sap",
+                "abap",
+                "sap hana",
+                "sap erp",
+                "fiori"
+            ],
+            "type": "Enterprise",
+            "related": [
+                "ERP"
+            ]
+        },
+        "Salesforce": {
+            "aliases": [
+                "salesforce",
+                "sfdc",
+                "apex",
+                "soql",
+                "lightning"
+            ],
+            "type": "Enterprise",
+            "related": [
+                "CRM"
+            ]
+        },
+        "Oracle ERP": {
+            "aliases": [
+                "oracle erp",
+                "netsuite",
+                "peoplesoft"
+            ],
+            "type": "Enterprise",
+            "related": [
+                "ERP"
+            ]
+        },
+        "Microsoft Power Platform": {
+            "aliases": [
+                "power platform",
+                "power apps",
+                "power automate",
+                "power virtual agents"
+            ],
+            "type": "Enterprise",
+            "related": [
+                "Office 365"
+            ]
+        }
+    },
+    "Testing & QA": {
+        "Selenium": {
+            "aliases": [
+                "selenium",
+                "webdriver"
+            ],
+            "type": "Testing",
+            "related": [
+                "Automation Testing",
+                "Python",
+                "Java"
+            ]
+        },
+        "Cypress": {
+            "aliases": [
+                "cypress",
+                "playwright",
+                "puppeteer"
+            ],
+            "type": "Testing",
+            "related": [
+                "Automation Testing",
+                "JavaScript",
+                "TypeScript"
+            ]
+        },
+        "Unit Testing": {
+            "aliases": [
+                "unit testing",
+                "pytest",
+                "junit",
+                "mocha",
+                "jest",
+                "unittest"
+            ],
+            "type": "Testing",
+            "related": [
+                "Software Engineering"
+            ]
+        }
+    },
+    "Cybersecurity": {
+        "Cybersecurity": {
+            "aliases": [
+                "cybersecurity",
+                "cyber security",
+                "infosec",
+                "penetration testing",
+                "pentesting",
+                "ethical hacking",
+                "owasp",
+                "siem"
+            ],
+            "type": "Cyber",
+            "related": [
+                "Cryptography",
+                "Network Security"
+            ]
+        },
+        "Network Security": {
+            "aliases": [
+                "network security",
+                "firewall",
+                "vpn",
+                "wireshark",
+                "ids/ips"
+            ],
+            "type": "Cyber",
+            "related": [
+                "Cybersecurity"
+            ]
+        }
+    },
+    "Mobile": {
+        "iOS": {
+            "aliases": [
+                "ios",
+                "ios SDK",
+                "swift",
+                "swiftui",
+                "objective-c",
+                "cocoapods"
+            ],
+            "type": "Mobile",
+            "related": [
+                "Swift",
+                "Mobile Development"
+            ]
+        },
+        "Android": {
+            "aliases": [
+                "android",
+                "android SDK",
+                "kotlin",
+                "java",
+                "gradle"
+            ],
+            "type": "Mobile",
+            "related": [
+                "Kotlin",
+                "Mobile Development"
+            ]
+        },
+        "Flutter": {
+            "aliases": [
+                "flutter",
+                "dart"
+            ],
+            "type": "Mobile",
+            "related": [
+                "Mobile Development"
+            ]
+        },
+        "React Native": {
+            "aliases": [
+                "react native",
+                "react-native"
+            ],
+            "type": "Mobile",
+            "related": [
+                "React",
+                "JavaScript",
+                "Mobile Development"
+            ]
+        }
+    },
+    "Project Management & Agile": {
+        "Agile": {
+            "aliases": [
+                "agile",
+                "scrum",
+                "kanban",
+                "scrum master",
+                "jira",
+                "confluence",
+                "sprint"
+            ],
+            "type": "Business",
+            "related": [
+                "Project Management"
+            ]
+        },
+        "Project Management": {
+            "aliases": [
+                "project management",
+                "pmp",
+                "prince2",
+                "product management",
+                "roadmapping"
+            ],
+            "type": "Business",
+            "related": [
+                "Agile"
+            ]
+        }
+    },
+    "Soft Skills": {
+        "Communication": {
+            "aliases": [
+                "communication",
+                "presentation",
+                "public speaking",
+                "written communication"
+            ],
+            "type": "SoftSkill",
+            "related": []
+        },
+        "Leadership": {
+            "aliases": [
+                "leadership",
+                "mentoring",
+                "team management",
+                "coaching"
+            ],
+            "type": "SoftSkill",
+            "related": []
+        },
+        "Problem Solving": {
+            "aliases": [
+                "problem solving",
+                "analytical thinking",
+                "critical thinking"
+            ],
+            "type": "SoftSkill",
+            "related": []
+        },
+        "Teamwork": {
+            "aliases": [
+                "teamwork",
+                "collaboration",
+                "cross-functional teams"
+            ],
+            "type": "SoftSkill",
+            "related": []
+        }
+    }
+}
