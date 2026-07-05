@@ -132,7 +132,7 @@ def inject_custom_css():
         }
     </style>
     """
-    st.markdown(css, unsafe_allow_html=True)
+    st.html(css)
 
 
 def render_metric_card(label: str, value: str, icon_name: str, subtext: str = "", trend_col: str = ""):
@@ -156,7 +156,7 @@ def render_metric_card(label: str, value: str, icon_name: str, subtext: str = ""
         </div>
     </div>
     """
-    st.markdown(html, unsafe_allow_html=True)
+    st.html(html)
 
 
 def get_status_badge_html(status: str) -> str:
@@ -223,4 +223,4 @@ def render_candidate_header(candidate):
         {progress_bar}
     </div>
     """
-    st.markdown(html_content, unsafe_allow_html=True)
+    st.html(html_content)

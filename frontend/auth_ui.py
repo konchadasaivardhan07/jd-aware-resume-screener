@@ -59,7 +59,7 @@ def render_password_requirements_panel(password: str):
         </div>
     </div>
     """
-    st.markdown(html_content, unsafe_allow_html=True)
+    st.html(html_content)
 
 def render_auth_page():
     inject_custom_css()
@@ -68,14 +68,13 @@ def render_auth_page():
     if "token" in st.query_params:
         st.session_state["auth_view"] = "reset_token"
         
-    st.markdown(
+    st.html(
         """
         <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
             <h2 style="font-size: 2.2rem; font-weight: 800; color: #2563eb; margin: 0; letter-spacing: -0.04em;">HireSense AI</h2>
             <p style="color: #64748b; font-size: 0.95rem; margin-top: 5px;">Enterprise Talent Assessment & Screening Portal</p>
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
     
     if "auth_view" not in st.session_state:
@@ -87,7 +86,7 @@ def render_auth_page():
     with col_l2:
         with st.container(border=True):
             if view == "login":
-                st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Recruiter Sign In</h3>", unsafe_allow_html=True)
+                st.html("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700; margin-bottom:12px;'>Recruiter Sign In</h3>")
                 st.caption("Access your talent screening workspace.")
                 
                 with st.form("login_form", clear_on_submit=False):
@@ -119,7 +118,7 @@ def render_auth_page():
                         st.rerun()
                         
             elif view == "signup":
-                st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Create Recruiter Account</h3>", unsafe_allow_html=True)
+                st.html("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700; margin-bottom:12px;'>Create Recruiter Account</h3>")
                 st.caption("Join your talent acquisition team on HireSense.")
                 
                 fullname = st.text_input("Full Name", placeholder="Jane Doe")
@@ -165,13 +164,13 @@ def render_auth_page():
                     st.rerun()
                     
             elif view == "otp_verify":
-                st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Email Verification</h3>", unsafe_allow_html=True)
+                st.html("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700; margin-bottom:12px;'>Email Verification</h3>")
                 st.info("We've sent a verification code to your email.")
                 
                 # Check for simulated sandbox bypass code
                 if "last_simulated_otp" in st.session_state:
                     otp = st.session_state["last_simulated_otp"]
-                    st.markdown(
+                    st.html(
                         f"""
                         <div style="background-color: rgba(255, 165, 0, 0.08); border: 1px dashed orange; border-radius: 6px; padding: 10px; margin-top: 6px; margin-bottom: 14px;">
                             <p style="margin: 0; color: #d97706; font-size: 0.82rem; font-weight: 600;">⚠️ Sandbox Mode Bypass</p>
@@ -180,8 +179,7 @@ def render_auth_page():
                                 <strong style="font-size: 0.88rem; color: #2563eb; font-family: monospace;">{otp}</strong>
                             </p>
                         </div>
-                        """,
-                        unsafe_allow_html=True
+                        """
                     )
                 
                 signup_email = st.session_state.get("signup_email", "")
@@ -239,7 +237,7 @@ def render_auth_page():
                     st.rerun()
                     
             elif view == "forgot":
-                st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Recover Password</h3>", unsafe_allow_html=True)
+                st.html("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700; margin-bottom:12px;'>Recover Password</h3>")
                 st.caption("Enter your email address to request a one-time password recovery link.")
                 
                 email = st.text_input("Work Email", placeholder="recruiter@company.com")
@@ -261,7 +259,7 @@ def render_auth_page():
                         # Check for simulated sandbox bypass link
                         if "last_simulated_reset_link" in st.session_state:
                             link = st.session_state["last_simulated_reset_link"]
-                            st.markdown(
+                            st.html(
                                 f"""
                                 <div style="background-color: rgba(255, 165, 0, 0.08); border: 1px dashed orange; border-radius: 6px; padding: 10px; margin-top: 12px; margin-bottom: 12px;">
                                     <p style="margin: 0; color: #d97706; font-size: 0.82rem; font-weight: 600;">⚠️ Sandbox Mode Bypass</p>
@@ -270,8 +268,7 @@ def render_auth_page():
                                         <br><a href="{link}" target="_self" style="font-weight: 700; color: #2563eb; text-decoration: underline;">👉 Reset Password Link</a>
                                     </p>
                                 </div>
-                                """,
-                                unsafe_allow_html=True
+                                """
                             )
                                 
                 if st.button("Back to Sign In", key="back_to_login_forgot", use_container_width=True):
@@ -280,7 +277,7 @@ def render_auth_page():
                     st.rerun()
 
             elif view == "reset_token":
-                st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Set New Password</h3>", unsafe_allow_html=True)
+                st.html("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700; margin-bottom:12px;'>Set New Password</h3>")
                 
                 token = st.query_params.get("token")
                 token_details = verify_password_reset_token(token)
