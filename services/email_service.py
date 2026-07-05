@@ -70,6 +70,8 @@ HireSense AI
         
         # Fallback console simulator if no credentials configured or real SMTP failed
         try:
+            import streamlit as st
+            st.session_state["last_simulated_reset_link"] = reset_link
             logger.info(f"Password reset email simulated to recipient: {to_email}")
             print("\n" + "="*80)
             print("✉️  [OUTGOING EMAIL SIMULATOR - SMTP NOT CONFIGURED]")
@@ -142,6 +144,8 @@ HireSense AI
                 
         # Fallback simulator
         try:
+            import streamlit as st
+            st.session_state["last_simulated_otp"] = otp
             logger.info(f"Verification OTP email simulated to recipient: {to_email}")
             print("\n" + "="*80)
             print("✉️  [OUTGOING EMAIL SIMULATOR - OTP CODE]")

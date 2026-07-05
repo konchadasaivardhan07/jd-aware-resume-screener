@@ -168,6 +168,22 @@ def render_auth_page():
                 st.markdown("<h3 style='margin-top:0; font-size:1.3rem; font-weight:700;'>Email Verification</h3>", unsafe_allow_html=True)
                 st.info("We've sent a verification code to your email.")
                 
+                # Check for simulated sandbox bypass code
+                if "last_simulated_otp" in st.session_state:
+                    otp = st.session_state["last_simulated_otp"]
+                    st.markdown(
+                        f"""
+                        <div style="background-color: rgba(255, 165, 0, 0.08); border: 1px dashed orange; border-radius: 6px; padding: 10px; margin-top: 6px; margin-bottom: 14px;">
+                            <p style="margin: 0; color: #d97706; font-size: 0.82rem; font-weight: 600;">⚠️ Sandbox Mode Bypass</p>
+                            <p style="margin: 4px 0 0 0; font-size: 0.76rem; color: var(--text-color);">
+                                Streamlit Cloud blocks outgoing SMTP sockets. Use this code to register: 
+                                <strong style="font-size: 0.88rem; color: #2563eb; font-family: monospace;">{otp}</strong>
+                            </p>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                
                 signup_email = st.session_state.get("signup_email", "")
                 st.caption(f"Verification code sent to: **{html.escape(signup_email)}**")
                 
@@ -187,6 +203,7 @@ def render_auth_page():
                     else:
                         resend_clicked = st.button("Resend OTP", key="otp_resend_active_btn", use_container_width=True)
                         if resend_clicked:
+                            st.session_state.pop("last_simulated_otp", None)
                             new_otp = create_email_otp(signup_email)
                             EmailService.send_otp_email(signup_email, new_otp)
                             st.session_state["otp_sent_time"] = time.time()
@@ -204,7 +221,7 @@ def render_auth_page():
                         success = register_recruiter(fullname, signup_email, company, password)
                         if success:
                             st.success("Account created successfully.")
-                            for key in ["signup_fullname", "signup_company", "signup_email", "signup_password", "otp_sent_time"]:
+                            for key in ["signup_fullname", "signup_company", "signup_email", "signup_password", "otp_sent_time", "last_simulated_otp"]:
                                 if key in st.session_state:
                                     del st.session_state[key]
                             st.session_state["auth_view"] = "login"
@@ -215,7 +232,7 @@ def render_auth_page():
                         st.error("OTP expired, incorrect, or already used.")
                         
                 if st.button("Back to Sign In", key="back_to_login_otp", use_container_width=True):
-                    for key in ["signup_fullname", "signup_company", "signup_email", "signup_password", "otp_sent_time"]:
+                    for key in ["signup_fullname", "signup_company", "signup_email", "signup_password", "otp_sent_time", "last_simulated_otp"]:
                         if key in st.session_state:
                             del st.session_state[key]
                     st.session_state["auth_view"] = "login"
@@ -232,6 +249,7 @@ def render_auth_page():
                     if not email:
                         st.error("Please enter your email address.")
                     else:
+                        st.session_state.pop("last_simulated_reset_link", None)
                         # Generate token (sends email if email exists, dummy delay logic matches timer mitigation)
                         token = create_password_reset_token(email)
                         if token:
@@ -239,8 +257,25 @@ def render_auth_page():
                             
                         # Always show the same success message to mitigate email enumeration attacks
                         st.success("If an account exists, a password reset link has been sent.")
+                        
+                        # Check for simulated sandbox bypass link
+                        if "last_simulated_reset_link" in st.session_state:
+                            link = st.session_state["last_simulated_reset_link"]
+                            st.markdown(
+                                f"""
+                                <div style="background-color: rgba(255, 165, 0, 0.08); border: 1px dashed orange; border-radius: 6px; padding: 10px; margin-top: 12px; margin-bottom: 12px;">
+                                    <p style="margin: 0; color: #d97706; font-size: 0.82rem; font-weight: 600;">⚠️ Sandbox Mode Bypass</p>
+                                    <p style="margin: 4px 0 0 0; font-size: 0.76rem; color: var(--text-color);">
+                                        Streamlit Cloud blocks outgoing SMTP sockets. Use this link to reset password:
+                                        <br><a href="{link}" target="_self" style="font-weight: 700; color: #2563eb; text-decoration: underline;">👉 Reset Password Link</a>
+                                    </p>
+                                </div>
+                                """,
+                                unsafe_allow_html=True
+                            )
                                 
                 if st.button("Back to Sign In", key="back_to_login_forgot", use_container_width=True):
+                    st.session_state.pop("last_simulated_reset_link", None)
                     st.session_state["auth_view"] = "login"
                     st.rerun()
 
