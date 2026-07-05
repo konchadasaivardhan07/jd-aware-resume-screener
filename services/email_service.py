@@ -19,7 +19,7 @@ class EmailService:
         smtp_username = get_env("SMTP_USERNAME")
         smtp_password = get_env("SMTP_PASSWORD")
         smtp_server = get_env("SMTP_SERVER", "smtp.gmail.com")
-        smtp_port = int(get_env("SMTP_PORT", "465"))
+        smtp_port = int(get_env("SMTP_PORT", "587"))
         
         # Determine the base URL dynamically or locally
         app_url = get_env("APP_URL", "http://localhost:8501")
@@ -98,7 +98,7 @@ HireSense AI
         smtp_username = get_env("SMTP_USERNAME")
         smtp_password = get_env("SMTP_PASSWORD")
         smtp_server = get_env("SMTP_SERVER", "smtp.gmail.com")
-        smtp_port = int(get_env("SMTP_PORT", "465"))
+        smtp_port = int(get_env("SMTP_PORT", "587"))
         
         subject = "HireSense AI - Recruiter Verification Code"
         body = f"""Hello,
