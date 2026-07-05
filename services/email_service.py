@@ -1,6 +1,7 @@
 import os
 import smtplib
 import logging
+from config.settings import get_env
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -15,13 +16,13 @@ class EmailService:
         If SMTP credentials are provided in the environment (.env), it dispatches a real email.
         Otherwise, it falls back to stdout simulation for development.
         """
-        smtp_username = os.getenv("SMTP_USERNAME")
-        smtp_password = os.getenv("SMTP_PASSWORD")
-        smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
-        smtp_port = int(os.getenv("SMTP_PORT", "465"))
+        smtp_username = get_env("SMTP_USERNAME")
+        smtp_password = get_env("SMTP_PASSWORD")
+        smtp_server = get_env("SMTP_SERVER", "smtp.gmail.com")
+        smtp_port = int(get_env("SMTP_PORT", "465"))
         
         # Determine the base URL dynamically or locally
-        app_url = os.getenv("APP_URL", "http://localhost:8501")
+        app_url = get_env("APP_URL", "http://localhost:8501")
         reset_link = f"{app_url}/?token={token}"
         
         if smtp_username and smtp_password:
@@ -94,10 +95,10 @@ HireSense AI
     @staticmethod
     def send_otp_email(to_email: str, otp: str) -> bool:
         """Send a recruiter registration verification code (OTP) via SMTP/Simulator."""
-        smtp_username = os.getenv("SMTP_USERNAME")
-        smtp_password = os.getenv("SMTP_PASSWORD")
-        smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
-        smtp_port = int(os.getenv("SMTP_PORT", "465"))
+        smtp_username = get_env("SMTP_USERNAME")
+        smtp_password = get_env("SMTP_PASSWORD")
+        smtp_server = get_env("SMTP_SERVER", "smtp.gmail.com")
+        smtp_port = int(get_env("SMTP_PORT", "465"))
         
         subject = "HireSense AI - Recruiter Verification Code"
         body = f"""Hello,

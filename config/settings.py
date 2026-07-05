@@ -26,7 +26,29 @@ from dotenv import load_dotenv
 # Load Environment Variables
 # -------------------------------------------------------------------
 
+
+# -------------------------------------------------------------------
+# Environment Variable Helper
+# Works both locally (.env) and on Streamlit Cloud (Secrets)
+# -------------------------------------------------------------------
 load_dotenv()
+
+try:
+    import streamlit as st
+
+    def get_env(key: str, default: str = "") -> str:
+        try:
+            if key in st.secrets:
+                return st.secrets[key]
+        except Exception:
+            pass
+
+        return os.getenv(key, default)
+
+except ImportError:
+
+    def get_env(key: str, default: str = "") -> str:
+        return os.getenv(key, default)
 
 
 # -------------------------------------------------------------------
@@ -101,7 +123,7 @@ class AIConfig:
 
     MODEL_NAME: Final[str] = "gemini-2.5-flash"
 
-    API_KEY: Final[str] = os.getenv("GEMINI_API_KEY", "")
+    API_KEY: Final[str] = get_env("GEMINI_API_KEY")
 
     TEMPERATURE: Final[float] = 0.1
 
@@ -169,7 +191,7 @@ def validate_environment() -> tuple[bool, str]:
         return (
             False,
             "Gemini API Key not found. "
-            "Please create a .env file and add GEMINI_API_KEY.",
+            "Please configure GEMINI_API_KEY in your .env file or Streamlit Secrets.",
         )
 
     return True, ""
