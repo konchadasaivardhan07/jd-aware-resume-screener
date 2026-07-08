@@ -28,7 +28,6 @@ from frontend.components import (
     render_candidate_header,
     get_status_badge_html
 )
-from frontend.auth_ui import render_auth_page
 
 def build_local_hiring_insights(results, jd):
     """Build a high-quality local summary of results if AI is unavailable."""
@@ -261,23 +260,14 @@ if "analysis_mode" not in st.session_state:
     st.session_state["analysis_mode"] = "AI Enhanced"
 if "api_cred_source" not in st.session_state:
     st.session_state["api_cred_source"] = "Default System Key"
-if "show_profile_modal" not in st.session_state:
-    st.session_state["show_profile_modal"] = False
-if "show_password_modal" not in st.session_state:
-    st.session_state["show_password_modal"] = False
+
 
 # ------------------------------------------------------------------
 # Recruiter Account Dialog Modals (My Profile, Settings, Password Change)
 # ------------------------------------------------------------------
 from datetime import datetime
 
-@st.dialog("👤 Recruiter Profile & Settings")
-def show_profile_dialog():
-    rec_info = st.session_state.get("authenticated_recruiter")
-    if not rec_info:
-        st.error("No active recruiter session.")
-        return
-        
+
     from database.auth import get_recruiter_details, update_recruiter_profile
     details = get_recruiter_details(rec_info["id"])
     if not details:
@@ -321,12 +311,6 @@ def show_profile_dialog():
                 else:
                     st.error("Failed to update profile.")
 
-@st.dialog("🔐 Change Password")
-def show_change_password_dialog():
-    rec_info = st.session_state.get("authenticated_recruiter")
-    if not rec_info:
-        st.error("No active recruiter session.")
-        return
         
     from database.auth import update_password
     from frontend.auth_ui import check_password_policy, render_password_requirements_panel
@@ -367,14 +351,6 @@ def show_change_password_dialog():
                 else:
                     st.error("Failed to update password.")
 
-# Trigger popover dialogs
-if st.session_state.get("show_profile_modal"):
-    st.session_state["show_profile_modal"] = False
-    show_profile_dialog()
-    
-if st.session_state.get("show_password_modal"):
-    st.session_state["show_password_modal"] = False
-    show_change_password_dialog()
 
 
 
@@ -666,9 +642,8 @@ else:
 # Main Area Layout (Top Bar with Clickable Account Dropdown Popover)
 # ------------------------------------------------------------------
 # Dynamic recruiter information
-rec_info = st.session_state.get("authenticated_recruiter")
-rec_name = rec_info["fullname"] if rec_info else "Sai Vardhan"
-rec_company = rec_info["company_name"] if rec_info else "Acme Corp"
+rec_name = "HireSense AI"
+rec_company = "Resume Screening Platform"
 
 import html
 escaped_rec_name = html.escape(rec_name)
@@ -819,23 +794,10 @@ with col_profile:
         )
         
         # Dropdown Actions
-        if st.button("👤 My Profile", key="profile_menu_item", use_container_width=True):
-            st.session_state["show_profile_modal"] = True
-            st.rerun()
             
-        if st.button("⚙ Account Settings", key="settings_menu_item", use_container_width=True):
-            st.session_state["show_profile_modal"] = True
-            st.rerun()
-            
-        if st.button("🔐 Change Password", key="password_menu_item", use_container_width=True):
-            st.session_state["show_password_modal"] = True
-            st.rerun()
         
         st.markdown('<hr style="margin: 8px 0; border: 0; border-top: 1px solid rgba(128,128,128,0.1);"/>', unsafe_allow_html=True)
         
-        if st.button("🚪 Logout", key="logout_dropdown_btn", use_container_width=True):
-            st.session_state["authenticated_recruiter"] = None
-            st.rerun()
 
 # Add a divider below top bar block
 st.markdown('<hr style="margin-top: -10px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(128,128,128,0.1);"/>', unsafe_allow_html=True)
