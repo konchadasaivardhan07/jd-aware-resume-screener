@@ -241,13 +241,13 @@ from config.settings import create_required_directories
 create_required_directories()
 
 # Session Authentication Guard
+# Demo Mode (Authentication Disabled)
 if "authenticated_recruiter" not in st.session_state:
-    st.session_state["authenticated_recruiter"] = None
-
-if st.session_state["authenticated_recruiter"] is None:
-    render_auth_page()
-    st.stop()
-
+    st.session_state["authenticated_recruiter"] = {
+        "fullname": "Demo Recruiter",
+        "email": "demo@hiresense.ai",
+        "company_name": "HireSense AI"
+    }
 # Initialize session states
 if "current_tab" not in st.session_state:
     st.session_state["current_tab"] = "Overview"
